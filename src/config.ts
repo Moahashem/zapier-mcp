@@ -31,9 +31,26 @@ const VALID_LOG_LEVELS: ReadonlyArray<LogLevel> = [
   "debug",
 ];
 
+// Zapier's MCP server exposes a meta-tool API that the agent uses to
+// discover, enable, and execute actions across any of the 8,000+ connected
+// apps. These 14 tools are the load-bearing surface — keepMetaTools is
+// true by default for this generic proxy so the agent retains the ability
+// to operate on any enabled action.
 const META_TOOL_NAMES = new Set([
+  "discover_zapier_actions",
+  "enable_zapier_action",
+  "disable_zapier_action",
+  "list_enabled_zapier_actions",
+  "execute_zapier_read_action",
+  "execute_zapier_write_action",
+  "send_feedback",
+  "auto_provision_mcp",
+  "list_zapier_skills",
+  "get_zapier_skill",
+  "create_zapier_skill",
+  "update_zapier_skill",
+  "delete_zapier_skill",
   "get_configuration_url",
-  // Zapier may add more meta tools over time; this is just the known list.
 ]);
 
 export const META_TOOL_SET: ReadonlySet<string> = META_TOOL_NAMES;
