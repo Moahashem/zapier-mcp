@@ -1,0 +1,11 @@
+{
+  "name": "zapier",
+  "version": "0.1.0",
+  "description": "Generic Zapier MCP proxy. Exposes the Zapier action surface (Gmail, Slack, Sheets, GitHub, Calendar, and 7000+ other apps) as MCP tools via Zapier's meta-tool API pattern.",
+  "author": {
+    "name": "Mo Hashem",
+    "email": "mo@flatfeelandlord.com"
+  },
+  "homepage": "https://github.com/Moahashem/zapier-mcp",
+  "license": "MIT"
+}
